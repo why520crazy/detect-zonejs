@@ -1,0 +1,22 @@
+<div *ngIf="showInfo">
+    <h3>Title: {{ title }}</h3>
+    <hr />
+    <div>
+        <h4>User Detail</h4>
+        <span>Name: {{ user.name }}</span
+        ><br />
+        <!-- <span>Display Name: {{user.displayName}}</span><br>
+    <span>Age: {{user.age}}</span> -->
+    </div>
+    <hr />
+    <app-user-detail [user]="user"></app-user-detail>
+</div>
+<hr />
+ngModel: <input name="title" [(ngModel)]="title" /><br />
+peer Input<input name="title1" /><br />
+<hr />
+<button (click)="changeTitle('New Title')">Change Title</button><br />
+<button (click)="changeName('New Name')">Change Name</button><br />
+<button (click)="changeUserRef('New Name Ref')">Change User Ref</button><br />
+
+<button (click)="doNothings()">Do Nothings</button><br />

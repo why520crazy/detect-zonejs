@@ -1,0 +1,27 @@
+{
+  "name": "detect-zonejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/why520crazy/detect-zonejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/why520crazy/detect-zonejs/issues"
+  },
+  "homepage": "https://github.com/why520crazy/detect-zonejs#readme",
+  "devDependencies": {
+    "typescript": "^3.2.1"
+  },
+  "dependencies": {
+    "@angular/compiler": "^7.1.2",
+    "zone.js": "^0.8.26"
+  }
+}
