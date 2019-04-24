@@ -15,6 +15,8 @@ import { UserInfo } from 'src/app/info';
 export class UserDetailComponent implements OnInit {
     @Input() user: UserInfo;
 
+    @Input() title: string;
+
     constructor() {}
 
     ngOnInit() {}

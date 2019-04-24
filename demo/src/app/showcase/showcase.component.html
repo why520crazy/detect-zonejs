@@ -9,7 +9,9 @@
     <span>Age: {{user.age}}</span> -->
     </div>
     <hr />
-    <app-user-detail [user]="user"></app-user-detail>
+    <app-user-detail [title]="title" [user]="user">
+        ---{{user.name}}
+    </app-user-detail>
 </div>
 <hr />
 ngModel: <input name="title" [(ngModel)]="title" /><br />
@@ -20,3 +22,5 @@ peer Input<input name="title1" /><br />
 <button (click)="changeUserRef('New Name Ref')">Change User Ref</button><br />
 
 <button (click)="doNothings()">Do Nothings</button><br />
+<button (click)="toggleShowInfo()">Toggle ShowInfo</button><br />
+

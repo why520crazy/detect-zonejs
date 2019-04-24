@@ -1,5 +1,5 @@
 export interface UserInfo {
     name: string;
-    displayName: string;
-    age: number;
+    displayName?: string;
+    age?: number;
 }

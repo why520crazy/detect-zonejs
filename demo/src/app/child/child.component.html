@@ -1,1 +1,10 @@
-<p>parent: {{ title }}</p>
+<div class="component-box">
+    <p>{{ title }} UserName: {{ user?.name }}</p>
+
+    <app-sub-child [title]="title"></app-sub-child>
+    <p>app-child-message: {{ messageService.message || "None" }}</p>
+    <button (click)="changeMessage()">Change Message from Child</button>
+    <button (click)="doNothings()">Do Nothings</button>
+    <button>Native Button</button>
+    <input [(ngModel)]="name" placeholder="输入值"/>
+</div>

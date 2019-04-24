@@ -1,9 +1,10 @@
+<!-- <app-showcase></app-showcase> -->
 
-<app-showcase></app-showcase>
-<!--
-<div>
-  <h2>{{title}} from {{name}}</h2>
+<div class="component-box">
+    <h2>{{ title }}</h2>
 
-
-  <app-child [title]="title"></app-child>
-</div> -->
+    <app-child [title]="title" [user]="user"></app-child>
+    <app-child [title]="title" [user]="user"></app-child>
+    <!-- <button (click)="changeAppChildrenInput()">Change Child-Component Input Value</button> -->
+    <p>app-component-message: {{messageService.message || "None"}}</p><button (click)="changeMessage()">Change Message from AppComponent</button>
+</div>

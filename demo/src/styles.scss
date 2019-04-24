@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+.component-box {
+    min-width: 600px;
+    max-width: 800px;
+    // border-style: dashed
+    border: 1px dashed #ddd;
+    padding: 20px;
+}

@@ -7,13 +7,15 @@ import { ChildComponent } from './child/child.component';
 import { ShowcaseComponent } from './showcase/showcase.component';
 import { UserDetailComponent } from './showcase/user-detail/user-detail.component';
 import { FormsModule } from '@angular/forms';
+import { SubChildComponent } from './child/sub-child/sub-child.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         ChildComponent,
         ShowcaseComponent,
-        UserDetailComponent
+        UserDetailComponent,
+        SubChildComponent
     ],
     imports: [BrowserModule, AppRoutingModule, FormsModule],
     providers: [],

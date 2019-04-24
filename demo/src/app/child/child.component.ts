@@ -1,19 +1,45 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {
+    Component,
+    OnInit,
+    Input,
+    ChangeDetectionStrategy
+} from '@angular/core';
 import { AppComponent } from '../app.component';
+import { UserInfo } from '../info';
+import { MessageService } from '../message.service';
 
 @Component({
     selector: 'app-child',
     templateUrl: './child.component.html',
-    styleUrls: ['./child.component.scss']
+    styleUrls: ['./child.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChildComponent implements OnInit {
     @Input()
     title: string;
 
-    constructor(private parent: AppComponent) {}
+    @Input()
+    user: UserInfo;
+
+    name: string;
+
+    constructor(
+        private parent: AppComponent,
+        public messageService: MessageService
+    ) {}
 
     ngOnInit() {
         // this.parent.title = 'Child Title';
         // this.parent.name = 'Lily-child';
+
+        setTimeout(() => {
+            this.messageService.setMessage('from child.component timeout');
+        }, 3000);
     }
+
+    changeMessage() {
+        this.messageService.setMessage(`from child`);
+    }
+
+    doNothings() {}
 }
