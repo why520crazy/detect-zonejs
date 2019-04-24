@@ -23,6 +23,8 @@ export class ChildComponent implements OnInit {
 
     name: string;
 
+    isShowSecondSubChild = false;
+
     constructor(
         private parent: AppComponent,
         public messageService: MessageService
@@ -32,9 +34,9 @@ export class ChildComponent implements OnInit {
         // this.parent.title = 'Child Title';
         // this.parent.name = 'Lily-child';
 
-        setTimeout(() => {
-            this.messageService.setMessage('from child.component timeout');
-        }, 3000);
+        // setTimeout(() => {
+        //     this.messageService.setMessage('from child.component timeout');
+        // }, 3000);
     }
 
     changeMessage() {
@@ -42,4 +44,10 @@ export class ChildComponent implements OnInit {
     }
 
     doNothings() {}
+
+    showSecondSubChild() {
+        // this.title = `showSecondSubChild`;
+        this.messageService.setMessage(`change from showSecondSubChild`);
+        this.isShowSecondSubChild = true;
+    }
 }

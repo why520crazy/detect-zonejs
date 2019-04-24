@@ -1,10 +1,12 @@
 <div class="component-box">
-    <p>{{ title }} UserName: {{ user?.name }}</p>
+    <p>child-component: {{ title }} | UserName: {{ user?.name }}</p>
 
     <app-sub-child [title]="title"></app-sub-child>
+    <app-sub-child [title]="title" *ngIf="isShowSecondSubChild"></app-sub-child>
     <p>app-child-message: {{ messageService.message || "None" }}</p>
     <button (click)="changeMessage()">Change Message from Child</button>
     <button (click)="doNothings()">Do Nothings</button>
     <button>Native Button</button>
+    <button (click)="showSecondSubChild()">Show Second Sub-Child</button>
     <input [(ngModel)]="name" placeholder="输入值"/>
 </div>

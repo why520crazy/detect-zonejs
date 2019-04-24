@@ -2,6 +2,7 @@
     <p>
         sub-child: {{ title }}
         <button (click)="changeParentValue()">Change Parent Value</button>
+        <button (click)="doNothings()">Do Nothings</button>
     </p>
     <p>app-sub-child-message: {{ messageService.message || "None" }}</p>
     <button (click)="changeMessage()">Change Message from Sub-Child</button>
